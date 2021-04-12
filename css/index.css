@@ -79,3 +79,28 @@ h5, h3 {
     text-decoration: none;
 
 }
+
+.product-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 3em 5% 0 5%;
+}
+
+.product-item {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+
+    margin: 2em 1em 0 0;
+    border: 1px solid gray;
+    border-style: groove;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px #888888;
+
+    background-color: lightgray;
+    text-align: center;
+}
+
+.product-title {
+    margin-bottom : 1em;
+}
+
