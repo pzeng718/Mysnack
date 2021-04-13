@@ -37,6 +37,11 @@
 
 }
 
+.banner-image {
+    width: 100%;
+    height: 30rem;
+}
+
 .team-list {
     display: flex;
     align-items: baseline;
