@@ -1,0 +1,46 @@
+.info-title {
+  background-color: blanchedalmond;
+  text-align: center;
+  width: 50%;
+  margin: auto auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 350px;
+  height: 350px;
+  margin-right: 2em;
+}
+
+img:hover {
+  width: 500px;
+  height: 500px;
+  border: 1px solid gray;
+  transition: 0.3s;
+}
+
+.productInfo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+button {
+  font-size: 20px;
+  margin-top: 2em;
+  border: none;
+  background-color: lightblue;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: aqua;
+  cursor: pointer;
+  padding: 12px 12px;
+}
