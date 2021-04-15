@@ -1,229 +1,223 @@
 /* Add styling here */
-/* Reset CSS*/ 
+/* Reset CSS*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/*------------------------- NAV BAR --------------------------*/ 
+/*------------------------- NAV BAR --------------------------*/
 #navbar {
-    height: 50px;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /* make the nav bar items to be in the same line*/
-#navbar-items li {    
-    display: inline-block;
-    line-height: 50px;
+#navbar-items li {
+  display: inline-block;
+  line-height: 50px;
 }
 
 #navbar-items a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 25px;
-    text-transform: uppercase;
-
+  text-decoration: none;
+  color: #fff;
+  padding: 0 25px;
+  text-transform: uppercase;
 }
 
 #navbar-items li a:hover {
-    color: #000;
-    background-color: #ccc;
-    display: inline-block;
+  color: #000;
+  background-color: #ccc;
+  display: inline-block;
 }
 /*----------------------------- End NAV BAR-----------------------*/
 
-/*------------------------------- BANNER -------------------------*/ 
+/*------------------------------- BANNER -------------------------*/
 #banner {
-    margin-top: 50px;
-    padding-top: 50%; /* make the banner's height automatically changed based on the width's size*/
-    background: url('../resource/banner.jpg') bottom center / cover no-repeat;
+  margin-top: 50px;
+  padding-top: 50%; /* make the banner's height automatically changed based on the width's size*/
+  background: url("../resource/banner.jpg") bottom center / cover no-repeat;
 }
 
 /*----------------------------- End BANNER --------------------------*/
 
-/*------------------------------- ABOUT --- -------------------------*/ 
+/*------------------------------- ABOUT --- -------------------------*/
 #about {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 64px 0;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0;
 }
 
 #about .section-heading {
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 4px;
-
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 4px;
 }
 
 #about .section-sub-heading {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 25px;
-    font-style: italic;
-    opacity: 0.5;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.5;
 }
 
 #about .about-description {
-    font-size: 25px;
-    font-family:'Times New Roman', Times, serif;
-    margin-top: 25px;
-    text-align: justify;
-    line-height: 1.6;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 1.6;
 
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.6;
 }
 
 .team-list {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
-    margin: 2rem;
-    height: 90vh;
-        
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  margin: 2rem;
+  height: 90vh;
 }
 .list-item {
-    margin-top: 4rem;
-    margin-right: 2rem;
+  margin-top: 4rem;
+  margin-right: 2rem;
 }
 
 .team-image {
-    width: 250px;
-    height: 300px;
-    margin-bottom: 2rem;
+  width: 250px;
+  height: 300px;
+  margin-bottom: 2rem;
 }
 
 .member-name {
-    padding: 10px;
-    font-family: sans-serif;
-    text-align: center;
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: center;
 }
 
-h4, h5 {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: lighter;
-    font-size: 10px;
-    color: grey;
-    padding: 10px;
-   
+h4,
+h5 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+  color: grey;
+  padding: 10px;
 }
-h5, h3 {
-
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px ;
-    color: black;
-    text-decoration: none;
-
+h5,
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
 }
-/*------------------------------- END ABOUT ----------------------------*/ 
+/*------------------------------- END ABOUT ----------------------------*/
 
-/*------------------------------- PRODUCT -------------------------*/ 
+/*------------------------------- PRODUCT -------------------------*/
 .product-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 3em 5% 0 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 3em 5% 0 5%;
 }
 
 .product-item {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    margin: 2em 1em 0 0;
-    border: 1px solid gray;
-    border-style: groove;
-    border-radius: 10px;
-    box-shadow: 4px 4px 6px #888888;
-    /*background-color: rgb(211, 211, 211);*/
-    background-color: rgb(38, 235, 235);
-    text-align: center;
-    transition: transform linear 0.1s;
-    will-change: transform;
-    
-
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  margin: 2em 1em 0 0;
+  border: 1px solid gray;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px #888888;
+  /*background-color: rgb(211, 211, 211);*/
+  background-color: rgb(38, 235, 235);
+  text-align: center;
+  transition: transform linear 0.1s;
+  will-change: transform;
 }
 
 .product-item:hover {
-    box-shadow: 0 2px 20px 0 rgb(38, 235, 235);
-    transform: translateY(-10px);
+  box-shadow: 0 2px 20px 0 rgb(38, 235, 235);
+  transform: translateY(-10px);
 }
 
 .product-title {
-    margin-bottom : 1em;
-    color: #000;
-    font-size: 25px;
+  margin-bottom: 1em;
+  color: #000;
+  font-size: 25px;
 }
 
+/*------------------------------- END PRODUCT -------------------------*/
 
-/*------------------------------- END PRODUCT -------------------------*/ 
-
-/*------------------------- CONTACT --------------------------*/ 
+/*------------------------- CONTACT --------------------------*/
 
 #contact .section-heading {
-    padding-top: 3rem;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 4px;
-
+  padding-top: 3rem;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 4px;
 }
 
 #contact .section-sub-heading {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 25px;
-    font-style: italic;
-    opacity: 0.6;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.6;
 }
 
 .contact-section {
-    background-color: rgb(144, 226, 236) ;
-   
+  background-color: rgb(144, 226, 236);
 }
 
 .contact-list {
-    margin-top: 32px;
-    overflow: hidden;
-    background-color: rgb(144, 226, 236) ;
+  margin-top: 32px;
+  overflow: hidden;
+  background-color: rgb(144, 226, 236);
 }
 
 .contact-item {
-    float: left;
-    width: 50%;
-    padding: 100px;
-    font-size: 19px;
-    line-height: 1.5;
-
+  float: left;
+  width: 50%;
+  padding: 100px;
+  font-size: 19px;
+  line-height: 1.5;
 }
 
 .contact-item i[class*="fas"] {
-    width: 30px;
-    
+  width: 30px;
 }
 
 .contact-item .form-control {
-    padding: 10px;
-    border: 1px solid #ccc;
-    width: 100%;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
 .sendbtn {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #000;
-    padding: 4px 15px;
-    float: right;
-    margin-top: 5px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 4px 15px;
+  float: right;
+  margin-top: 5px;
 }
 
 /*-------------------------FOOTER--------------------*/
 footer {
-    height: 20vh;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding-top: 3.5rem;
+  height: 20vh;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding-top: 3.5rem;
 }

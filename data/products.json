@@ -1,0 +1,79 @@
+{
+  "1": {
+    "id": 1,
+    "name": "potato chip",
+    "price": 5.99,
+    "qty": 10,
+    "image": "../resource/potato_chip.jpg"
+  },
+  "2": {
+    "id": 2,
+    "name": "cashew",
+    "price": 15.99,
+    "qty": 5,
+    "image": "../resource/cashew.jpg"
+  },
+  "3": {
+    "id": 3,
+    "name": "tortilla chip",
+    "price": 3.99,
+    "qty": 20,
+    "image": "../resource/tortilla_chip.jpg"
+  },
+  "4": {
+    "id": 4,
+    "name": "rice snack",
+    "price": 2.99,
+    "qty": 15,
+    "image": "../resource/rice_snack.jpg"
+  },
+  "5": {
+    "id": 5,
+    "name": "popcorn",
+    "price": 2.99,
+    "qty": 15,
+    "image": "../resource/popcorn.jpg"
+  },
+  "6": {
+    "id": 6,
+    "name": "milk",
+    "price": 4.99,
+    "qty": 15,
+    "image": "../resource/milk.jpg"
+  },
+  "7": {
+    "id": 7,
+    "name": "dove",
+    "price": 5.99,
+    "qty": 10,
+    "image": "../resource/dove.jpg"
+  },
+  "8": {
+    "id": 8,
+    "name": "cheez-it",
+    "price": 4.99,
+    "qty": 10,
+    "image": "../resource/cheez-it.png"
+  },
+  "9": {
+    "id": 9,
+    "name": "cheetos",
+    "price": 1.99,
+    "qty": 20,
+    "image": "../resource/cheetos.jpg"
+  },
+  "10": {
+    "id": 10,
+    "name": "fritos",
+    "price": 1.99,
+    "qty": 10,
+    "image": "../resource/fritos.jpg"
+  },
+  "11": {
+    "id": 11,
+    "name": "doritos-L",
+    "price": 4.99,
+    "qty": 15,
+    "image": "../resource/doritos-L.png"
+  }
+}
