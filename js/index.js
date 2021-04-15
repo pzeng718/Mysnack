@@ -84,7 +84,7 @@ let productHtml = '<div class="product-container">';
 for (let product of products) {
   productHtml += '<div class="product-item">';
   productHtml +=
-    `<a href="product-info?product_id=${product.id}">` +
+    `<a href="product-info.html?product_id=${product.id}">` +
     `<img src="${product.image}" alt=${product.name} style="width:400px;height:350px;"></img></a>`;
 
   productHtml += '<div class="product-title">';
