@@ -101,29 +101,68 @@ let products = [
 ];
 
 let url = new URL(window.location.href);
+
 let product_id = parseInt(url.searchParams.get("product_id"));
+let product = products.filter((p) => p.id === product_id)[0];
 
-let product = products.find((p) => p.id === product_id);
+let productNameBody = jQuery(".product-name");
+let productImageBody = jQuery(".product-image");
+let amountSelectBody = jQuery(".amount-select");
+let priceinfoBody = jQuery(".price-info");
 
-let productNameBody = jQuery("#productName");
-let orderBtnBody = jQuery(".order-btn");
-let infoBody = jQuery(".info");
-
-productNameBody.append(`<i>${product.name}</i>`);
-
-for (let imageSrc of product.image) {
-  infoBody.append(`<img src=${imageSrc}></img>`);
+productNameBody.append(`${product.name}`);
+for (let imgSrc of product.image) {
+  productImageBody.append(`<img src=${imgSrc} alt=${product.name}>`);
 }
 
-infoBody.append(
-  `<p>Quantity left available: <strong>${product.qty}</strong></p>`
-);
-infoBody.append(`<p>Price: <strong>${product.price}</strong></p>`);
-infoBody.append(
-  `<p>Manufactured by: <strong>${product.manufacturer}</strong></p>`
-);
-infoBody.append(`<p>- <i>${product.description}</i></p>`);
+let amountSelectHtml = '<select name="amount" id="amount">';
+for (let i = 1; i <= product.qty; i++) {
+  amountSelectHtml += `<option value="${i.toString()}">${i}</option>`;
+}
+amountSelectHtml += "</select>";
+amountSelectHtml += `<br/>Qty available: ${product.qty}`;
+amountSelectBody.append(amountSelectHtml);
 
-orderBtnBody.append(`<form action="order-page.html?product_id=${product_id}" method="POST">
-<button type="submit">Order this product</button>
-</form>`);
+let shippingCost = 9.99;
+let qty = 1;
+
+let priceinfoHtml = `<p>Unit Price: $${product.price}</p>`;
+priceinfoHtml += `<p class="total-price">Total Price: $${(
+  qty * product.price +
+  shippingCost
+).toFixed(2)}<p>`;
+priceinfoBody.append(priceinfoHtml);
+
+// Update total price based on the amount of products user select
+jQuery("#amount").on("change", function () {
+  var elem = $(this);
+  qty = parseInt(elem.val());
+  elem
+    .closest(".order-form")
+    .find(".total-price")
+    .text(`Total Price: $${(qty * product.price + shippingCost).toFixed(2)}`);
+});
+
+// Add the shipping cost to the total price
+jQuery("#shipping-method").on("change", function () {
+  var elem = $(this);
+  var shippingMethod = elem.val();
+  switch (shippingMethod) {
+    case "sameday":
+      shippingCost = 9.99;
+      break;
+    case "overnight":
+      shippingCost = 5.99;
+      break;
+    case "2-day":
+      shippingCost = 1.99;
+      break;
+    case "standard":
+      shippingCost = 0;
+      break;
+  }
+  elem
+    .closest(".order-form")
+    .find(".total-price")
+    .text(`Total Price: $${(qty * product.price + shippingCost).toFixed(2)}`);
+});

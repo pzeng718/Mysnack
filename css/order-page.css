@@ -1,0 +1,42 @@
+.container {
+  width: 65%;
+  margin: auto auto;
+  background-color: aquamarine;
+  border-radius: 20px;
+  padding: 1.5em;
+}
+
+.container img {
+  width: 350px;
+  height: 350px;
+  margin-right: 2em;
+  border-radius: 10px;
+}
+
+.order-form {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 2em;
+}
+
+.price-info {
+  text-align: right;
+  line-height: 1em;
+}
+
+.order-form-btn {
+  font-size: 20px;
+  margin: auto;
+  border: none;
+  background-color: #ebb734;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+.order-form-btn:hover {
+  background-color: #eb6534;
+  cursor: pointer;
+  padding: 12px 12px;
+  text-align: center;
+}
