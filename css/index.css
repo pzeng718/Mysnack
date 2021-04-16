@@ -142,8 +142,8 @@ h3 {
   /*background-color: rgb(211, 211, 211);*/
   background-color: rgb(38, 235, 235);
   text-align: center;
-  transition: transform linear 0.1s;
-  will-change: transform;
+  /*transition: transform linear 0.1s;
+  will-change: transform; These make the product float above the nav bar*/
 }
 
 .product-item:hover {
