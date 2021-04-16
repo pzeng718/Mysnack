@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Order Form</title>
     <link rel="stylesheet" href="../css/order-page.css" />
   </head>
   <body>
@@ -14,18 +14,55 @@
       <div class="product-image"></div>
       <form action="" class="order-form">
         <label for="firstname">Firstname: </label>
-        <input type="text" name="firstname" id="firstname" />
+        <input
+          type="text"
+          name="firstname"
+          placeholder="Your first name"
+          required
+          id="firstname"
+        />
         <br />
         <label for="firstname">Lastname: </label>
-        <input type="text" name="lastname" id="lastname" />
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Your last name"
+          required
+          id="lastname"
+        />
         <br />
+        <label for="email">Email: </label>
+        <input
+          type="text"
+          name="email"
+          placeholder="abcd@efg.com"
+          required
+          id="email"
+        />
+        <br />
+        <label for="amount-select">Please choose the quantity:</label>
+        <input type="number" id="amount-select" value="1" max="10">
+
         <!-- Shipping information -->
         <h5 style="margin-bottom: 0.5em">Shipping Information</h5>
-        <label for="street">Street:</label>
-        <input type="text" name="street" id="street" style="width: 300px" />
+        <label for="street">Shipping Address:</label>
+        <input
+          type="text"
+          name="street"
+          placeholder="Ex: 1234 University Drive"
+          required
+          id="street"
+          style="width: 300px"
+        />
         <br />
         <label for="city">City:</label>
-        <input type="text" name="city" id="city" />
+        <input
+          type="text"
+          name="city"
+          placeholder="Ex: Irvine"
+          required
+          id="city"
+        />
         <label for="state">State:</label>
         <select name="state" id="state">
           <option value="AL">Alabama</option>
@@ -80,7 +117,7 @@
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
-
+        
         <br />
         <label for="shipping-method">Choose a shipping method</label>
         <br />
@@ -91,14 +128,47 @@
           <option value="standard">Standard Shipping -- Free</option>
         </select>
         <br />
-        <label for="amount">Amount: </label>
-        <span class="amount-select"></span>
-        <div class="price-info"></div>
-        <button type="submit" class="order-form-btn">Checkout</button>
+        <!------------------------- Card Information----------------------->
+        <div class="card-info">
+          <div class="form-control">
+            <label for="card-name">Name On Card</label>
+            <input type="text" placeholder="Full Name on card"id="card-name" name="card-name">
+          <br>
+          </div>
+          <div class="form-control">
+            <label for="card-number">Card Number</label>
+            <input type="text" placeholder="XXX XXXX XXXX XXXX" id="card-number" name="card-number">
+          <br>
+          </div>
+          <div class="form-control">
+            <label for="expire-date">Expiration Date</label>
+            <input type="text" placeholder="mm/yy"id="expire-date" name="expire-date">
+          <br>
+          </div>
+          <div class="form-control">
+            <label for="cvv">CVV</label>
+            <input type="text" placeholder="Ex: 123 "id="cvv" name="cvv">
+          <br>
+          </div>
+          
+        </div>
+        <!--------------------------- Order Summary------------------------->
+        <div class="order-summary">
+          <h5 style="text-align: center;">Order Summary</h5>
+          <p>Item Added: </strong><span id="product-name"></span></p>
+          <p>Quantity: <span id="amount-select"></span></p>
+          <p>Item price: <span id="price-info"></span></p>
+          <p>Shipping: <span id="shipping-method"></span></p>
+        </div>
+        <label for="amount">Total Amount: </label><br>
+        <!--<span class="amount-select"></span>-->
+        <!--<div class="price-info"></div>-->
+        <button type="submit" class="order-form-btn" >Submit</button>
       </form>
     </div>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="../js/order-page.js"></script>
+  <script src="https://kit.fontawesome.com/3957f95a4e.js" crossorigin="anonymous"></script>
 </html>

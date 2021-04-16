@@ -1,3 +1,38 @@
+
+/*------------------------- NAV BAR --------------------------*/
+#navbar {
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 30px;
+}
+
+/* make the nav bar items to be in the same line*/
+#navbar-items li {
+  display: inline-block;
+  line-height: 20px;
+}
+
+#navbar-items a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 25px;
+  text-transform: uppercase;
+}
+
+#navbar-items li a:hover {
+  color: #000;
+  background-color: #ccc;
+  display: inline-block;
+}
+/*----------------------------- End NAV BAR-----------------------*/
+
+.product-info-container {
+  margin-top: 100px;
+}
 .info-title {
   background-color: blanchedalmond;
   text-align: center;

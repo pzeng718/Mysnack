@@ -110,6 +110,7 @@ let productImageBody = jQuery(".product-image");
 let amountSelectBody = jQuery(".amount-select");
 let priceinfoBody = jQuery(".price-info");
 
+
 productNameBody.append(`${product.name}`);
 for (let imgSrc of product.image) {
   productImageBody.append(`<img src=${imgSrc} alt=${product.name}>`);

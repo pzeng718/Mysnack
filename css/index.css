@@ -14,6 +14,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1; /* add z-index so, the nav bar won't be under the products section*/
 }
 
 /* make the nav bar items to be in the same line*/
@@ -142,8 +143,8 @@ h3 {
   /*background-color: rgb(211, 211, 211);*/
   background-color: rgb(38, 235, 235);
   text-align: center;
-  /*transition: transform linear 0.1s;
-  will-change: transform; These make the product float above the nav bar*/
+  transition: transform linear 0.1s;
+  will-change: transform; /*These make the product float above the nav bar*/
 }
 
 .product-item:hover {
