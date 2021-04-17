@@ -123,7 +123,7 @@ amountSelectBody.append(amountSelectHtml);
 let shippingCost = 9.99;
 let qty = 1;
 
-totalPriceBody.append(`${(qty * product.price + shippingCost).toFixed(2)}`);
+totalPriceBody.append(`$${(qty * product.price + shippingCost).toFixed(2)}`);
 
 unitPriceBody.append(`$${product.price}`);
 // Update total price based on the amount of products user select
