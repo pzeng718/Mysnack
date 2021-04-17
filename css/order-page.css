@@ -1,4 +1,4 @@
-.container {
+/*.container {
   width: 65%;
   margin: auto auto;
   background-color: aquamarine;
@@ -28,6 +28,180 @@
 .order-form-btn {
   font-size: 20px;
   margin: auto;
+  border: none;
+  background-color: #ebb734;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+.order-form-btn:hover {
+  background-color: #eb6534;
+  cursor: pointer;
+  padding: 12px 12px;
+  text-align: center;
+}*/
+
+
+/*------------------------------------Joey's part rewritten---------------------*/
+/* Reset CSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*height: 100vh;*/
+  
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*padding: 10px;*/
+  
+}
+/*------------------------- NAV BAR --------------------------*/
+#navbar {
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+/* make the nav bar items to be in the same line*/
+#navbar-items li {
+  display: inline-block;
+  line-height: 50px;
+}
+
+#navbar-items a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 25px;
+  text-transform: uppercase;
+}
+
+#navbar-items li a:hover {
+  color: #000;
+  background-color: #ccc;
+  display: inline-block;
+}
+/*----------------------------- End NAV BAR-----------------------*/
+
+.container {
+  /*width: 65%;
+  max-width: 700px;
+  margin-top: 50px;
+  /*margin: auto auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;*/
+  
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 4px;
+ 
+}
+
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .user-details .input-box {
+  width: calc(100% / 2 - 10px);
+  margin: 25px 0 15px 0;
+}
+
+.user-details .input-box .details, .form-control .details {
+  font-weight: bold;
+  
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+}
+
+.container form .shipping-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .shipping-details .input-box {
+  width: calc(100% / 2 - 10px);
+  margin: 25px 0 15px 0;
+}
+
+.shipping-details .input-box input{
+  height: 45px;
+  width: 100%;
+}
+
+.shipping-details .input-box select {
+  height: 45px;
+  width: 100%;
+}
+
+.container form .card-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .card-info .input-box {
+  width: calc(100% / 2 - 10px);
+  margin: 25px 0 15px 0;
+}
+
+.card-info .input-box input{
+  height: 45px;
+  width: 100%;
+}
+
+.product-image {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.container img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  
+}
+
+.container form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order-form {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 2em;
+}
+
+.price-info {
+  text-align: right;
+  line-height: 1em;
+}
+
+.order-form-btn {
+  height: 50px;
+  font-size: 20px;
+  margin: 50px 0;
   border: none;
   background-color: #ebb734;
   padding: 10px 10px;
