@@ -23,25 +23,27 @@
         Order form for <span class="product-name"></span>
       </h2>
       <div class="product-image"></div>
-      <form action="" class="order-form">
+      <form action="mailto:mysnack@uci.edu" method="post" class="order-form">
         <div class="user-details">
           <div class="input-box">
-            <label for="firstname" class="details">Firstname: </label>
+            <label for="firstname" class="details">First Name: </label>
             <input
               type="text"
               name="firstname"
               placeholder="Enter your first name"
+              minlength=3
               required
               id="firstname"
             />
             <br />
           </div>
           <div class="input-box">
-            <label for="firstname" class="details">Lastname: </label>
+            <label for="firstname" class="details">Last Name: </label>
             <input
               type="text"
               name="lastname"
               placeholder="Enter your last name"
+              minlength=3
               required
               id="lastname"
             />
@@ -53,13 +55,14 @@
               type="text"
               name="email"
               placeholder="abcd@efg.com"
+              minlength=5
               required
               id="email"
             />
             <br />
           </div>
           <div class="input-box">
-            <label for="amount-select">Please choose the quantity:</label>
+            <label for="amount-select" class="details">Quantity:</label>
             <span id="amount-select"></span>
           </div>
           <!-------------------------------Shipping information ------------------------------------->
@@ -165,6 +168,7 @@
               <input
                 type="text"
                 placeholder="Full Name on card"
+                required 
                 id="card-name"
                 name="card-name"
               />
@@ -174,7 +178,9 @@
               <label for="card-number" class="details">Card Number</label>
               <input
                 type="text"
-                placeholder="XXX XXXX XXXX XXXX"
+                placeholder="XXXX XXXX XXXX XXXX"
+                minlength=16 maxlength=16
+                required
                 id="card-number"
                 name="card-number"
               />
@@ -185,6 +191,8 @@
               <input
                 type="text"
                 placeholder="mm/yy"
+                minlength=5 maxlength=5
+                required
                 id="expire-date"
                 name="expire-date"
               />
@@ -192,7 +200,7 @@
             </div>
             <div class="input-box">
               <label for="cvv" class="details">CVV</label>
-              <input type="text" placeholder="Ex: 123 " id="cvv" name="cvv" />
+              <input type="text" placeholder="Ex: 123 " minlength=3 maxlength=4 required id="cvv" name="cvv" />
               <br />
             </div>
           </div>
