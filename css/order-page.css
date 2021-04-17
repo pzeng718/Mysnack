@@ -1,47 +1,3 @@
-/*.container {
-  width: 65%;
-  margin: auto auto;
-  background-color: aquamarine;
-  border-radius: 20px;
-  padding: 1.5em;
-}
-
-.container img {
-  width: 350px;
-  height: 350px;
-  margin-right: 2em;
-  border-radius: 10px;
-}
-
-.order-form {
-  font-size: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  line-height: 2em;
-}
-
-.price-info {
-  text-align: right;
-  line-height: 1em;
-}
-
-.order-form-btn {
-  font-size: 20px;
-  margin: auto;
-  border: none;
-  background-color: #ebb734;
-  padding: 10px 10px;
-  border-radius: 4px;
-}
-
-.order-form-btn:hover {
-  background-color: #eb6534;
-  cursor: pointer;
-  padding: 12px 12px;
-  text-align: center;
-}*/
-
-
 /*------------------------------------Joey's part rewritten---------------------*/
 /* Reset CSS*/
 * {
@@ -52,13 +8,12 @@
 
 body {
   /*height: 100vh;*/
-  
+
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
   display: flex;
   align-items: center;
   justify-content: center;
   /*padding: 10px;*/
-  
 }
 /*------------------------- NAV BAR --------------------------*/
 #navbar {
@@ -68,7 +23,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  
 }
 
 /* make the nav bar items to be in the same line*/
@@ -92,14 +46,6 @@ body {
 /*----------------------------- End NAV BAR-----------------------*/
 
 .container {
-  /*width: 65%;
-  max-width: 700px;
-  margin-top: 50px;
-  /*margin: auto auto;
-  background: #fff;
-  border-radius: 20px;
-  padding: 1.5rem;*/
-  
   max-width: 800px;
   width: 100%;
   height: auto;
@@ -107,7 +53,6 @@ body {
   background: #fff;
   padding: 25px 30px;
   border-radius: 4px;
- 
 }
 
 .container form .user-details {
@@ -121,9 +66,9 @@ form .user-details .input-box {
   margin: 25px 0 15px 0;
 }
 
-.user-details .input-box .details, .form-control .details {
+.user-details .input-box .details,
+.form-control .details {
   font-weight: bold;
-  
 }
 .user-details .input-box input {
   height: 45px;
@@ -141,7 +86,7 @@ form .shipping-details .input-box {
   margin: 25px 0 15px 0;
 }
 
-.shipping-details .input-box input{
+.shipping-details .input-box input {
   height: 45px;
   width: 100%;
 }
@@ -162,7 +107,7 @@ form .card-info .input-box {
   margin: 25px 0 15px 0;
 }
 
-.card-info .input-box input{
+.card-info .input-box input {
   height: 45px;
   width: 100%;
 }
@@ -178,7 +123,6 @@ form .card-info .input-box {
   width: 250px;
   height: 250px;
   border-radius: 10px;
-  
 }
 
 .container form {
@@ -191,11 +135,6 @@ form .card-info .input-box {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 2em;
-}
-
-.price-info {
-  text-align: right;
-  line-height: 1em;
 }
 
 .order-form-btn {
