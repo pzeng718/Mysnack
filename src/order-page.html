@@ -41,7 +41,7 @@
         />
         <br />
         <label for="amount-select">Please choose the quantity:</label>
-        <input type="number" id="amount-select" value="1" max="10">
+        <span id="amount-select"></span>
 
         <!-- Shipping information -->
         <h5 style="margin-bottom: 0.5em">Shipping Information</h5>
@@ -117,7 +117,7 @@
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
-        
+
         <br />
         <label for="shipping-method">Choose a shipping method</label>
         <br />
@@ -132,43 +132,66 @@
         <div class="card-info">
           <div class="form-control">
             <label for="card-name">Name On Card</label>
-            <input type="text" placeholder="Full Name on card"id="card-name" name="card-name">
-          <br>
+            <input
+              type="text"
+              placeholder="Full Name on card"
+              id="card-name"
+              name="card-name"
+            />
+            <br />
           </div>
           <div class="form-control">
             <label for="card-number">Card Number</label>
-            <input type="text" placeholder="XXX XXXX XXXX XXXX" id="card-number" name="card-number">
-          <br>
+            <input
+              type="text"
+              placeholder="XXX XXXX XXXX XXXX"
+              id="card-number"
+              name="card-number"
+            />
+            <br />
           </div>
           <div class="form-control">
             <label for="expire-date">Expiration Date</label>
-            <input type="text" placeholder="mm/yy"id="expire-date" name="expire-date">
-          <br>
+            <input
+              type="text"
+              placeholder="mm/yy"
+              id="expire-date"
+              name="expire-date"
+            />
+            <br />
           </div>
           <div class="form-control">
             <label for="cvv">CVV</label>
-            <input type="text" placeholder="Ex: 123 "id="cvv" name="cvv">
-          <br>
+            <input type="text" placeholder="Ex: 123 " id="cvv" name="cvv" />
+            <br />
           </div>
-          
         </div>
         <!--------------------------- Order Summary------------------------->
         <div class="order-summary">
-          <h5 style="text-align: center;">Order Summary</h5>
-          <p>Item Added: </strong><span id="product-name"></span></p>
-          <p>Quantity: <span id="amount-select"></span></p>
-          <p>Item price: <span id="price-info"></span></p>
-          <p>Shipping: <span id="shipping-method"></span></p>
+          <h5 style="text-align: center">Order Summary</h5>
+          <p>
+            Item Added: <strong><span class="product-name"></span></strong>
+          </p>
+          <p>
+            Quantity: <strong><span id="qty-selected">1</span></strong>
+          </p>
+          <p>
+            Item price: <strong><span id="unit-price"></span></strong>
+          </p>
+          <p>
+            Shipping: <strong><span id="shipping-cost">$9.99</span></strong>
+          </p>
         </div>
-        <label for="amount">Total Amount: </label><br>
-        <!--<span class="amount-select"></span>-->
-        <!--<div class="price-info"></div>-->
-        <button type="submit" class="order-form-btn" >Submit</button>
+        <div class="price-info"></div>
+        <button type="submit" class="order-form-btn">Submit</button>
       </form>
     </div>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="../js/order-page.js"></script>
-  <script src="https://kit.fontawesome.com/3957f95a4e.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/3957f95a4e.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

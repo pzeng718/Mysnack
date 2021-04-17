@@ -107,41 +107,40 @@ let product = products.filter((p) => p.id === product_id)[0];
 
 let productNameBody = jQuery(".product-name");
 let productImageBody = jQuery(".product-image");
-let amountSelectBody = jQuery(".amount-select");
+let amountSelectBody = jQuery("#amount-select");
 let priceinfoBody = jQuery(".price-info");
-
+let orderSummaryBody = jQuery(".order-summary");
+let unitPriceBody = jQuery("#unit-price");
 
 productNameBody.append(`${product.name}`);
 for (let imgSrc of product.image) {
   productImageBody.append(`<img src=${imgSrc} alt=${product.name}>`);
 }
 
-let amountSelectHtml = '<select name="amount" id="amount">';
-for (let i = 1; i <= product.qty; i++) {
-  amountSelectHtml += `<option value="${i.toString()}">${i}</option>`;
-}
-amountSelectHtml += "</select>";
-amountSelectHtml += `<br/>Qty available: ${product.qty}`;
+let amountSelectHtml = `<input type="number" id="amount" value="1" min="1" max="${product.qty}" size="200px"> `;
 amountSelectBody.append(amountSelectHtml);
 
 let shippingCost = 9.99;
 let qty = 1;
 
-let priceinfoHtml = `<p>Unit Price: $${product.price}</p>`;
+let priceinfoHtml = "";
 priceinfoHtml += `<p class="total-price">Total Price: $${(
   qty * product.price +
   shippingCost
 ).toFixed(2)}<p>`;
 priceinfoBody.append(priceinfoHtml);
 
+unitPriceBody.append(`$${product.price}`);
 // Update total price based on the amount of products user select
 jQuery("#amount").on("change", function () {
   var elem = $(this);
-  qty = parseInt(elem.val());
+  qty = elem.val();
   elem
     .closest(".order-form")
     .find(".total-price")
     .text(`Total Price: $${(qty * product.price + shippingCost).toFixed(2)}`);
+
+  elem.closest(".order-form").find("#qty-selected").text(`${qty}`);
 });
 
 // Add the shipping cost to the total price
@@ -166,4 +165,6 @@ jQuery("#shipping-method").on("change", function () {
     .closest(".order-form")
     .find(".total-price")
     .text(`Total Price: $${(qty * product.price + shippingCost).toFixed(2)}`);
+
+  elem.closest(".order-form").find("#shipping-cost").text(`$${shippingCost}`);
 });
