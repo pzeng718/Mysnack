@@ -38,11 +38,12 @@
       <form action="" class="order-form" id="order-form">
         <div class="user-details">
           <div class="input-box">
-            <label for="firstname" class="details">Firstname: </label>
+            <label for="firstname" class="details">First Name: </label>
             <input
               type="text"
               name="firstname"
               placeholder="Enter your first name"
+              minlength=3
               required
               id="firstname"
               minlength="3"
@@ -51,11 +52,12 @@
             <br />
           </div>
           <div class="input-box">
-            <label for="firstname" class="details">Lastname: </label>
+            <label for="firstname" class="details">Last Name: </label>
             <input
               type="text"
               name="lastname"
               placeholder="Enter your last name"
+              minlength=3
               required
               id="lastname"
               minlength="3"
@@ -68,6 +70,7 @@
               type="email"
               name="email"
               placeholder="abcd@efg.com"
+              minlength=5
               required
               id="email"
             />
@@ -181,6 +184,7 @@
               <input
                 type="text"
                 placeholder="Full Name on card"
+                required 
                 id="card-name"
                 required
                 name="card-name"
