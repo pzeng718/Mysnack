@@ -143,27 +143,13 @@ jQuery("#amount").on("change", function () {
 const shippingMethodsToPrice = {
   sameday: 9.99,
   overnight: 5.99,
-  '2-day': 1.99,
+  "2-day": 1.99,
   standard: 0,
-}
+};
 // Add the shipping cost to the total price
 jQuery("#shipping-method").on("change", function () {
   var elem = $(this);
   var shippingMethod = elem.val();
-  // switch (shippingMethod) {
-  //   case "sameday":
-  //     shippingCost = 9.99;
-  //     break;
-  //   case "overnight":
-  //     shippingCost = 5.99;
-  //     break;
-  //   case "2-day":
-  //     shippingCost = 1.99;
-  //     break;
-  //   case "standard":
-  //     shippingCost = 0;
-  //     break;
-  // }
   var shippingCost = shippingMethodsToPrice[shippingMethod];
   elem
     .closest(".order-form")
@@ -173,42 +159,50 @@ jQuery("#shipping-method").on("change", function () {
   elem.closest(".order-form").find("#shipping-cost").text(`$${shippingCost}`);
 });
 
-
-
 // Nav bar responsive
 function onHamburgerMenuClick() {
-  $('.navbar-items-wrapper').toggleClass('navbar-items-wrapper--responsive');
+  $(".navbar-items-wrapper").toggleClass("navbar-items-wrapper--responsive");
 }
 
 // form validation
-$(document).ready(function() {
+$(document).ready(function () {
   // $(".order-form").validate();
 
-
   $("#order-form").validate({
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       // do other things for a valid form
       console.log(sendEmail());
-    }
+    },
   });
 });
 
-  // send email 
-  function sendEmail() {
-    let amountSelect = $('#order-form').find('#amount-select').val();
-    amountSelect = amountSelect && parseInt(amountSelect) ? parseInt(amountSelect) : 1;
-    const shippingMethod = $('#order-form').find('#shipping-method').val();
-    const shippingPrice = shippingMethodsToPrice[shippingMethod];
-    const totalPrice = (product.price * amountSelect) + shippingPrice;
-    var recepientEmail = $('#order-form').find('#email').val();
-    var subject = "MySnack Order Confirmation";
-    var emailContent = "Hello, This is MySnacks shop \n\n"
-                      + "Here is your order: "
-                      + "Item: \t" + product.name
-                      + "Quantity: \t" + amountSelect
-                      + "Total Price: \t" + totalPrice 
-                      + "Thank you for shopping with us.";
-    window.location = 'mailto:' + recepientEmail + '?subject=' + subject + '&body=' + emailContent;
-    return emailContent;
-    // `Hello this is ..... ${product.name}....`
-  }
+// send email
+function sendEmail() {
+  let amountSelect = $("#order-form").find("#amount-select").val();
+  amountSelect =
+    amountSelect && parseInt(amountSelect) ? parseInt(amountSelect) : 1;
+  const shippingMethod = $("#order-form").find("#shipping-method").val();
+  const shippingPrice = shippingMethodsToPrice[shippingMethod];
+  const totalPrice = product.price * amountSelect + shippingPrice;
+  var recepientEmail = $("#order-form").find("#email").val();
+  var subject = "MySnack Order Confirmation";
+  var emailContent =
+    "Hello, This is MySnacks shop %0D%0A" +
+    "Here is your order: " +
+    "%0D%0AItem: " +
+    product.name +
+    "%0D%0AQuantity: " +
+    amountSelect +
+    "%0D%0ATotal Price: " +
+    totalPrice +
+    "%0D%0AThank you for shopping with us.";
+  window.location =
+    "mailto:" +
+    "mysnack@gmail.com" +
+    "?subject=" +
+    subject +
+    "&body=" +
+    emailContent;
+  return emailContent;
+  // `Hello this is ..... ${product.name}....`
+}

@@ -9,13 +9,9 @@
   <body>
     <div id="navbar">
       <div class="hamburger-menu-wrapper">
-        <a
-          href="javascript:void(0);"
-          onclick="onHamburgerMenuClick()"
-        >
-        <i class="fas fa-bars hamburger-menu-icon">
-        </i>
-      </a>
+        <a href="javascript:void(0);" onclick="onHamburgerMenuClick()">
+          <i class="fas fa-bars hamburger-menu-icon"> </i>
+        </a>
       </div>
       <div class="navbar-items-wrapper navbar-items-wrapper--responsive">
         <ul id="navbar-items">
@@ -26,7 +22,6 @@
         </ul>
       </div>
     </div>
-
 
     <!------------------------------------Joey's part rewritten--------------------->
     <!------------------------------------Order Form------------------------------>
@@ -43,7 +38,7 @@
               type="text"
               name="firstname"
               placeholder="Enter your first name"
-              minlength=3
+              minlength="3"
               required
               id="firstname"
               minlength="3"
@@ -57,7 +52,7 @@
               type="text"
               name="lastname"
               placeholder="Enter your last name"
-              minlength=3
+              minlength="3"
               required
               id="lastname"
               minlength="3"
@@ -70,7 +65,7 @@
               type="email"
               name="email"
               placeholder="abcd@efg.com"
-              minlength=5
+              minlength="5"
               required
               id="email"
             />
@@ -78,7 +73,6 @@
           </div>
           <div class="input-box">
             <label for="amount-select">Please choose the quantity:</label>
-            <input type="number" name="amount-select" id="amount-select">
             <span id="amount-select"></span>
           </div>
           <!-------------------------------Shipping information ------------------------------------->
@@ -184,7 +178,7 @@
               <input
                 type="text"
                 placeholder="Full Name on card"
-                required 
+                required
                 id="card-name"
                 required
                 name="card-name"
@@ -216,7 +210,14 @@
             </div>
             <div class="input-box">
               <label for="cvv" class="details">CVV</label>
-              <input type="text" placeholder="Ex: 123" required minlength="3" id="cvv" name="cvv" />
+              <input
+                type="text"
+                placeholder="Ex: 123"
+                required
+                minlength="3"
+                id="cvv"
+                name="cvv"
+              />
               <br />
             </div>
           </div>
@@ -240,9 +241,8 @@
               Total Price: <strong><span class="total-price"></span></strong>
             </p>
             <div class="submit-btn">
-              <button type="submit" class="order-form-btn" >Submit</button>
+              <button type="submit" class="order-form-btn">Submit</button>
             </div>
-            
           </div>
         </div>
       </form>
