@@ -198,7 +198,7 @@ function sendEmail() {
     "%0D%0AThank you for shopping with us.";
   window.location =
     "mailto:" +
-    "mysnack@gmail.com" +
+    recepientEmail +
     "?subject=" +
     subject +
     "&body=" +
