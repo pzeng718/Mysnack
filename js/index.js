@@ -107,7 +107,8 @@ for (let product of products) {
   productHtml += '<div class="product-item">';
   productHtml +=
     `<a href="product-info.html?product_id=${product.id}">` +
-    `<img src="${product.image[0]}" alt=${product.name} style="width:400px;height:350px;"></img></a>`;
+    // `<img src="${product.image[0]}" alt=${product.name} style="width:400px;height:350px;"></img></a>`;
+    `<img  class="product-image" src="${product.image[0]}" alt=${product.name}"></img></a>`;
 
   productHtml += '<div class="product-title">';
 
@@ -120,3 +121,7 @@ for (let product of products) {
 }
 productHtml += "</div>";
 productBodyElement.append(productHtml);
+
+function onHamburgerMenuClick() {
+  $('.navbar-items-wrapper').toggleClass('navbar-items-wrapper--responsive');
+}

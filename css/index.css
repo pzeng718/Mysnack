@@ -4,23 +4,40 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px solid; */
 }
 
 /*------------------------- NAV BAR --------------------------*/
 #navbar {
-  height: 50px;
   background-color: #000;
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 0;
   right: 0;
-  z-index: 1; /* add z-index so, the nav bar won't be under the products section*/
+  z-index: 1; /*add z-index so, the nav bar won't be under the products section */
+}
+
+.navbar-items-wrapper--responsive {
+  display: none;
 }
 
 /* make the nav bar items to be in the same line*/
 #navbar-items li {
-  display: inline-block;
-  line-height: 50px;
+  /* display: inline-block; */
+  /* line-height: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  
+}
+
+#navbar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 #navbar-items a {
@@ -34,7 +51,39 @@
   color: #000;
   background-color: #ccc;
   display: inline-block;
+  line-height: 50px;
 }
+
+
+@media only screen and (min-width: 600px) {
+  .navbar-items-wrapper--responsive {
+    display: block;
+  }
+
+  #navbar-items {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hamburger-menu-wrapper {
+    display: none;
+  }
+}
+
+.hamburger-menu-wrapper {
+  text-align: right;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu-icon {
+  color: #fff;
+}
+
+
 /*----------------------------- End NAV BAR-----------------------*/
 
 /*------------------------------- BANNER -------------------------*/
@@ -48,10 +97,13 @@
 
 /*------------------------------- ABOUT --- -------------------------*/
 #about {
-  width: 800px;
+  /*width: 800px;*/
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+
 }
 
 #about .section-heading {
@@ -83,20 +135,23 @@
 }
 
 .team-list {
+  /* width: 100%; */
   display: flex;
-  align-items: baseline;
-  justify-content: space-evenly;
-  margin: 2rem;
-  height: 90vh;
+  /* align-items: baseline; */
+  /* justify-content: space-evenly; */
+  /* margin: 2rem; */
+  /* height: 90vh; */
 }
 .list-item {
   margin-top: 4rem;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+  /* margin-left: 2rem; */
+  /* margin-right: 2rem; */
 }
 
 .team-image {
-  width: 250px;
-  height: 300px;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 2rem;
 }
 
@@ -127,15 +182,20 @@ h3 {
 
 /*------------------------------- PRODUCT -------------------------*/
 .product-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto auto;
-  margin: 3em 5% 0 5%;
+  margin: 3em 5% 0 5%; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-item {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
-  margin: 2em 1em 0 0;
+  /* margin: 2em 1em 0 0; */
+  margin: 1rem 0.5rem;
   border: 1px solid gray;
   border-style: groove;
   border-radius: 10px;
@@ -145,6 +205,30 @@ h3 {
   text-align: center;
   transition: transform linear 0.1s;
   will-change: transform; /*These make the product float above the nav bar*/
+  /* Phone*/
+  width: 100%;
+  height: 40vh;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .product-item {
+    width: 45%;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .product-item {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .product-item {
+    width: 20%;
+  }
 }
 
 .product-item:hover {
@@ -158,10 +242,18 @@ h3 {
   font-size: 25px;
 }
 
+.product-image {
+  width: 100%;
+  height: 50%;
+}
+
 /*------------------------------- END PRODUCT -------------------------*/
 
 /*------------------------- CONTACT --------------------------*/
 
+#contact {
+  width: 100%;
+}
 #contact .section-heading {
   padding-top: 3rem;
   font-size: 30px;

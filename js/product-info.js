@@ -127,3 +127,7 @@ infoBody.append(`<p>- <i>${product.description}</i></p>`);
 orderBtnBody.append(`<form action="order-page.html?product_id=${product_id}" method="POST">
 <button type="submit">Order this product</button>
 </form>`);
+
+function onHamburgerMenuClick() {
+  $('.navbar-items-wrapper').toggleClass('navbar-items-wrapper--responsive');
+}

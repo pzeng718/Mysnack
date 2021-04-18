@@ -1,19 +1,33 @@
 
 /*------------------------- NAV BAR --------------------------*/
 #navbar {
-  height: 50px;
   background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 30px;
+  z-index: 1;
+}
+.navbar-items-wrapper--responsive {
+  display: none;
 }
 
 /* make the nav bar items to be in the same line*/
 #navbar-items li {
-  display: inline-block;
-  line-height: 20px;
+  /*display: inline-block;
+  line-height: 20px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+#navbar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 #navbar-items a {
@@ -27,6 +41,35 @@
   color: #000;
   background-color: #ccc;
   display: inline-block;
+  line-height: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-items-wrapper--responsive {
+    display: block;
+  }
+
+  #navbar-items {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hamburger-menu-wrapper {
+    display: none;
+  }
+}
+
+.hamburger-menu-wrapper {
+  text-align: right;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu-icon {
+  color: #fff;
 }
 /*----------------------------- End NAV BAR-----------------------*/
 

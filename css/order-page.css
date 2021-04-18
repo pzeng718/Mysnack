@@ -17,18 +17,35 @@ body {
 }
 /*------------------------- NAV BAR --------------------------*/
 #navbar {
-  height: 50px;
   background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+}
+
+.navbar-items-wrapper--responsive {
+  display: none;
 }
 
 /* make the nav bar items to be in the same line*/
 #navbar-items li {
-  display: inline-block;
-  line-height: 50px;
+  /*display: inline-block;
+  line-height: 50px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+
+#navbar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 #navbar-items a {
@@ -42,6 +59,35 @@ body {
   color: #000;
   background-color: #ccc;
   display: inline-block;
+  line-height: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-items-wrapper--responsive {
+    display: block;
+  }
+
+  #navbar-items {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hamburger-menu-wrapper {
+    display: none;
+  }
+}
+
+.hamburger-menu-wrapper {
+  text-align: right;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu-icon {
+  color: #fff;
 }
 /*----------------------------- End NAV BAR-----------------------*/
 
@@ -55,16 +101,16 @@ body {
   border-radius: 4px;
 }
 
-.container form .user-details {
-  display: flex;
+/*.container form .user-details {
+  /*display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+}*/
 
-form .user-details .input-box {
-  width: calc(100% / 2 - 10px);
+/*form .user-details .input-box {
+  /*width: calc(100% / 2 - 10px);
   margin: 25px 0 15px 0;
-}
+}*/
 
 .user-details .input-box .details,
 .form-control .details {
@@ -75,16 +121,16 @@ form .user-details .input-box {
   width: 100%;
 }
 
-.container form .shipping-details {
-  display: flex;
+/*.container form .shipping-details {
+ /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 form .shipping-details .input-box {
-  width: calc(100% / 2 - 10px);
+  /*width: calc(100% / 2 - 10px);
   margin: 25px 0 15px 0;
-}
+}*/
 
 .shipping-details .input-box input {
   height: 45px;
@@ -96,16 +142,7 @@ form .shipping-details .input-box {
   width: 100%;
 }
 
-.container form .card-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-form .card-info .input-box {
-  width: calc(100% / 2 - 10px);
-  margin: 25px 0 15px 0;
-}
 
 .card-info .input-box input {
   height: 45px;
@@ -152,4 +189,40 @@ form .card-info .input-box {
   cursor: pointer;
   padding: 12px 12px;
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  form .user-details .input-box {
+    width: calc(100% / 2 - 10px);
+    margin: 25px 0 15px 0;
+  }
+
+  .container form .shipping-details {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+   }
+   
+   form .shipping-details .input-box {
+     width: calc(100% / 2 - 10px);
+     margin: 25px 0 15px 0;
+   }
+
+   .container form .card-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  form .card-info .input-box {
+    width: calc(100% / 2 - 10px);
+    margin: 25px 0 15px 0;
+  }
 }

@@ -8,13 +8,25 @@
   </head>
   <body>
     <div id="navbar">
-      <ul id="navbar-items">
-        <li><a href="../src/index.html">Home</a></li>
-        <li><a href="../src/index.html#product">Products</a></li>
-        <li><a href="../src/index.html#about">About</a></li>
-        <li><a href="../src/index.html#contact">Contact</a></li>
-      </ul>
+      <div class="hamburger-menu-wrapper">
+        <a
+          href="javascript:void(0);"
+          onclick="onHamburgerMenuClick()"
+        >
+        <i class="fas fa-bars hamburger-menu-icon">
+        </i>
+      </a>
+      </div>
+      <div class="navbar-items-wrapper navbar-items-wrapper--responsive">
+        <ul id="navbar-items">
+          <li><a href="../src/index.html">Home</a></li>
+          <li><a href="../src/index.html#product">Products</a></li>
+          <li><a href="../src/index.html#about">About</a></li>
+          <li><a href="../src/index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+
 
     <!------------------------------------Joey's part rewritten--------------------->
     <!------------------------------------Order Form------------------------------>
@@ -23,7 +35,7 @@
         Order form for <span class="product-name"></span>
       </h2>
       <div class="product-image"></div>
-      <form action="" class="order-form">
+      <form action="" class="order-form" id="order-form">
         <div class="user-details">
           <div class="input-box">
             <label for="firstname" class="details">Firstname: </label>
@@ -33,7 +45,9 @@
               placeholder="Enter your first name"
               required
               id="firstname"
+              minlength="3"
             />
+            <!--<p id="firstname-message"></p>-->
             <br />
           </div>
           <div class="input-box">
@@ -44,13 +58,14 @@
               placeholder="Enter your last name"
               required
               id="lastname"
+              minlength="3"
             />
             <br />
           </div>
           <div class="input-box">
             <label for="email" class="details">Email: </label>
             <input
-              type="text"
+              type="email"
               name="email"
               placeholder="abcd@efg.com"
               required
@@ -60,6 +75,7 @@
           </div>
           <div class="input-box">
             <label for="amount-select">Please choose the quantity:</label>
+            <input type="number" name="amount-select" id="amount-select">
             <span id="amount-select"></span>
           </div>
           <!-------------------------------Shipping information ------------------------------------->
@@ -166,6 +182,7 @@
                 type="text"
                 placeholder="Full Name on card"
                 id="card-name"
+                required
                 name="card-name"
               />
               <br />
@@ -174,7 +191,9 @@
               <label for="card-number" class="details">Card Number</label>
               <input
                 type="text"
-                placeholder="XXX XXXX XXXX XXXX"
+                placeholder="XXXX XXXX XXXX XXXX"
+                required
+                minlength="16"
                 id="card-number"
                 name="card-number"
               />
@@ -185,6 +204,7 @@
               <input
                 type="text"
                 placeholder="mm/yy"
+                required
                 id="expire-date"
                 name="expire-date"
               />
@@ -192,11 +212,10 @@
             </div>
             <div class="input-box">
               <label for="cvv" class="details">CVV</label>
-              <input type="text" placeholder="Ex: 123 " id="cvv" name="cvv" />
+              <input type="text" placeholder="Ex: 123" required minlength="3" id="cvv" name="cvv" />
               <br />
             </div>
           </div>
-          <br />
           <!--------------------------- Order Summary------------------------->
           <div class="order-summary">
             <h5 style="font-size: 25px">Order Summary</h5>
@@ -216,7 +235,10 @@
             <p>
               Total Price: <strong><span class="total-price"></span></strong>
             </p>
-            <button type="submit" class="order-form-btn">Submit</button>
+            <div class="submit-btn">
+              <button type="submit" class="order-form-btn" >Submit</button>
+            </div>
+            
           </div>
         </div>
       </form>
@@ -224,6 +246,7 @@
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
   <script src="../js/order-page.js"></script>
   <script
     src="https://kit.fontawesome.com/3957f95a4e.js"

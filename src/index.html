@@ -5,20 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/3957f95a4e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/index.css" />
     <title>mySnack</title>
 </head>
-
 <body>
     
     <!-- Add the navbar under here -->
     <div id="navbar">
-      <ul id="navbar-items">
-        <li><a href="../src/index.html">Home</a></li>
-        <li><a href="../src/index.html#product">Products</a></li>
-        <li><a href="../src/index.html#about">About</a></li>
-        <li><a href="../src/index.html#contact">Contact</a></li>
-      </ul>
+      <div class="hamburger-menu-wrapper">
+        <a
+          href="javascript:void(0);"
+          onclick="onHamburgerMenuClick()"
+        >
+        <i class="fas fa-bars hamburger-menu-icon">
+        </i>
+      </a>
+      </div>
+      <div class="navbar-items-wrapper navbar-items-wrapper--responsive">
+        <ul id="navbar-items">
+          <li><a href="../src/index.html">Home</a></li>
+          <li><a href="../src/index.html#product">Products</a></li>
+          <li><a href="../src/index.html#about">About</a></li>
+          <li><a href="../src/index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-------------------Banner section----------------->
@@ -112,7 +123,6 @@
       </footer>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../js/index.js"></script>
 
 </html>
