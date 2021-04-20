@@ -1,8 +1,8 @@
 # Mysnack
-INF124 Project – Group 2
-Peter Zeng - 72842271
-Joey Khanh Le - 21142455
-Eric Dong Chen - 63859984
+INF124 Project – Group 2 <br>
+Peter Zeng - 72842271 <br>
+Joey Khanh Le - 21142455 <br>
+Eric Dong Chen - 63859984 <br>
 
 
 ============================================================
