@@ -26,7 +26,7 @@ email that they input when filling the form.
 + product-info.css: javascript file  for product-info.html
 + order-page.css: javascript file  for order-page.html
 
-4) resoruce folder: contain all the images used for the website. 
+4) resource folder: contain all the images used for the website. 
 We used unsplash.com for all the images. 
 
 
