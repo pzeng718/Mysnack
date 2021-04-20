@@ -14,8 +14,6 @@
 
 /* make the nav bar items to be in the same line*/
 #navbar-items li {
-  /*display: inline-block;
-  line-height: 20px;*/
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -166,7 +166,6 @@ function onHamburgerMenuClick() {
 
 // form validation
 $(document).ready(function () {
-  // $(".order-form").validate();
 
   $("#order-form").validate({
     submitHandler: function (form) {
@@ -204,5 +203,5 @@ function sendEmail() {
     "&body=" +
     emailContent;
   return emailContent;
-  // `Hello this is ..... ${product.name}....`
+  
 }

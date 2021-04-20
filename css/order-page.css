@@ -101,16 +101,6 @@ body {
   border-radius: 4px;
 }
 
-/*.container form .user-details {
-  /*display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}*/
-
-/*form .user-details .input-box {
-  /*width: calc(100% / 2 - 10px);
-  margin: 25px 0 15px 0;
-}*/
 
 .user-details .input-box .details,
 .form-control .details {
@@ -121,16 +111,6 @@ body {
   width: 100%;
 }
 
-/*.container form .shipping-details {
- /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-form .shipping-details .input-box {
-  /*width: calc(100% / 2 - 10px);
-  margin: 25px 0 15px 0;
-}*/
 
 .shipping-details .input-box input {
   height: 45px;
